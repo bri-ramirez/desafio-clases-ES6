@@ -6,14 +6,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 // Importamos las clases de cliente e impuestos
 
 // creamos una instancia de la clase Impuestos
-var impuestos = new _Impuestos["default"]();
-
-// asignamos los valores para el monto bruto anual y deducciones
-impuestos.monto_bruto_anual = 1000;
-impuestos.deducciones = 200;
+var impuestos = new _Impuestos["default"](1000, 200);
 
 // creamos una instancia de la clase usuario, y le asignamos el nombre en el constructor
-var cliente = new _Cliente["default"]("Briggitte Ramirez");
+var cliente = new _Cliente["default"]('Briggitte Ramirez');
 
 // asignamos el objeto "impuestos" a la propiedad "impuesto" del objeto cliente
 cliente.impuesto = impuestos;

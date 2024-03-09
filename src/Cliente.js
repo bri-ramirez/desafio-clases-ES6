@@ -5,21 +5,24 @@ class Cliente {
     this._porcentaje = porcentaje;
   }
 
-  set impuesto (impuesto) {
+  set impuesto(impuesto) {
     this._impuesto = impuesto;
   }
 
-  get nombre () {
+  get nombre() {
     return this._nombre;
   }
 
-  set nombre (nombre) {
+  set nombre(nombre) {
     this._nombre = nombre;
   }
 
-  calcularImpuesto(){
+  calcularImpuesto() {
     // retorna el resultado del calculo del impuesto
-    return (this._impuesto.monto_bruto_anual - this._impuesto.deducciones) * this._porcentaje;
+    return (
+      (this._impuesto.monto_bruto_anual - this._impuesto.deducciones) *
+      this._porcentaje
+    );
   }
 }
 

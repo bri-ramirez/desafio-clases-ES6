@@ -13,8 +13,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 var Impuestos = /*#__PURE__*/function () {
-  function Impuestos() {
+  function Impuestos(monto_bruto_anual, deducciones) {
     _classCallCheck(this, Impuestos);
+    this._monto_bruto_anual = monto_bruto_anual;
+    this._deducciones = deducciones;
   }
   _createClass(Impuestos, [{
     key: "monto_bruto_anual",
